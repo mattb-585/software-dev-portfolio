@@ -1,0 +1,41 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.textboxWidth {
+    width: 70%;
+    margin-right: 7rem;
+}
+
+.billingLabel {
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+    text-align: end;
+    width: 30%;
+}
+
+.billingText {
+    margin-bottom: 0.5rem;
+}
+
+#side-nav {
+    float: left;
+    width: 10%;
+}
+
+.btn {
+    background-color: #1A91E6;
+    border-color: #1A91E6;
+}
+
+a {
+    color: #1A91E6;
+}
+
+.logo {
+    color: #1A91E6;
+}
+
+span {
+    font-family: 'Noto Serif', serif;
+}

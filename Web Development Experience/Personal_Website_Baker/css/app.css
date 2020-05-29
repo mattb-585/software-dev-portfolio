@@ -1,0 +1,264 @@
+body {
+    color: #444444;
+}
+
+main {
+    padding: 1rem 0 6rem 0;
+}
+
+#main-nav {
+    background-color: #d3d3d3;
+}
+
+#main-nav button{
+    color: #001533;
+}
+
+#main-nav a {
+    color: #001533;
+}
+
+#main-nav a:hover,
+#main-nav a:focus {
+    text-decoration: underline;
+}
+
+#about_cards i {
+    font-size: 3.5rem;
+    color: #444444;
+}
+
+#about_cards i:hover,
+#about_cards i:focus {
+    color: #000000;
+}
+
+#contact i {
+    color: #444444;
+}
+
+#contact i:hover,
+#contact i:focus {
+    color: #000000;
+}
+
+.list-unstyled a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.list-unstyled a:hover,
+.list-unstyled a:focus {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #001533;
+    color: #ffffff;
+    padding-top: 1rem;
+    font-size: 1rem;
+}
+
+footer i {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+footer i:hover,
+footer i:focus {
+    color: #888888;
+}
+
+
+/* ABOUT ME - INDEX */
+
+#hero .jumbotron {
+    background-color: rgba(0, 172, 255, 0.25);
+}
+
+#hero .btn-primary {
+    background-color: #001533;
+    border: none;
+}
+
+#hero .btn-primary:hover,
+#hero .btn-primary:focus {
+    background-color: #444444;
+    border: none;
+}
+
+#about_cards i {
+    font-size: 3.5rem;
+}
+
+#about_cards a {
+    font-size: 1.5rem;
+}
+
+#skills-side-nav a {
+    color: #001533;
+}
+
+#skills-side-nav a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Education */
+
+#education li {
+    list-style-image: url('graduation-cap-solid.svg');
+    font-size: 2.7rem;
+}
+
+#education li ul li {
+    font-size: 1.7rem;
+    list-style-image: url('check-circle-solid.svg');
+}
+
+/* Skills */
+
+.skills div {
+    margin-bottom: 0.5rem;
+}
+
+.skills div i {
+    font-size: 1.3rem;
+}
+
+.skills div h4 {
+    font-size: 1.45rem;
+    margin-right: 0.4rem;
+}
+
+/* CONTACT PAGE */
+
+#contact .col-lg-6{
+    margin-bottom: 3rem;
+}
+
+#contact i {
+    font-size: 4rem;
+}
+
+#contact button {
+    background-color: #001533;
+    border: none;
+}
+
+#contact button:hover,
+#contact button:focus {
+    background-color: #444444;
+    border: none;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 320px) {
+    html {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+
+    #skills-side-nav {
+        border-bottom: 1px solid #000000;
+        border-right: none;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    html {
+        font-size: 18px;
+    }
+
+    #skills-side-nav {
+        border-bottom: none;
+        border-right: 1px solid #000000;
+    }
+
+    /* ABOUT ME - INDEX */
+
+    .display-4 {
+        font-size: 3rem;
+    }
+
+    /* FOOTER */
+
+    footer .col-lg-12 {
+        margin-top: 0 !important;
+    }
+   
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 576px) {
+    /* ABOUT ME - INDEX */
+
+    .display-4 {
+        font-size: 3rem;
+    }
+
+    #about_cards .col-lg-4 {
+        margin-bottom: 1rem;
+    }
+
+    /* FOOTER */
+
+    footer h6 {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+
+    footer .col-sm-12 {
+        margin-bottom: 1.5rem;
+    }
+
+    footer .col-lg-12 {
+        margin-top: 5rem;
+    }
+
+    footer i {
+        font-size: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    /* ABOUT ME - INDEX */
+
+    .display-4 {
+        font-size: 3rem;
+    }
+
+    #about_cards .col-lg-4 {
+        margin-bottom: 1rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+        font-size: 1.3rem;
+    }
+
+    footer h6 {
+        font-size: 1.3rem;
+    }
+
+    footer .col-sm-12 {
+        margin-bottom: 1.5rem;
+    }
+
+    footer .col-lg-12 {
+        margin-top: 5rem;
+    }
+
+    footer i {
+        font-size: 4.5rem;
+    }
+}

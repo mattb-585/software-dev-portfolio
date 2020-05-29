@@ -7,15 +7,20 @@ main {
 }
 
 #main-nav {
-    background-color: #d3d3d3;
+    background-color: #001533;
 }
 
 #main-nav button{
-    color: #001533;
+    color: #ffffff;
 }
 
 #main-nav a {
-    color: #001533;
+    color: #ffffff;
+}
+
+.navbar-toggler {
+    color: #ffffff !important;
+    background-color: #ffffff !important;
 }
 
 #main-nav a:hover,

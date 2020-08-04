@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title text-center"><%= @user.first_name %> <%= @user.last_name %></h2>
+          <h4 class="category text-center">My Profile</h4>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <p>My Shipping Address:</p>
+              <div class="card-header-success pl-2">
+                <p class="text-black"><%= @user.mailing_address_line_one %></p>
+                <% if @user.mailing_address_line_two != "" %>
+                  <p class="text-black"><%= @user.mailing_address_line_two %></p>
+                <% end %>
+                <p class="text-black"><%= @user.mailing_city %> <%= @user.mailing_state %></p>
+                <p class="text-black"><%= @user.mailing_zip %></p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p>My Billing Address:</p>
+              <div class="card-header-success pl-2">
+                <p class="text-black"><%= @user.billing_address_line_one %></p>
+                <% if @user.billing_address_line_two != "" %>
+                  <p class="text-black"><%= @user.billing_address_line_two %></p>
+                <% end %>
+                <p class="text-black"><%= @user.billing_city %> <%= @user.billing_state %></p>
+                <p class="text-black"><%= @user.billing_zip %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

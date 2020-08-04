@@ -1,0 +1,68 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+
+      <form class="form bg-light pr-5 pl-5 rounded">
+        <%= form_with(model: product, local: true) do |form| %>
+
+          <% if product.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+              <ul>
+                <% product.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="field form-control-lg">
+            <div class="field form-label"><%= form.label :name %></div>
+            <%= form.text_field :name %>
+          </div>
+
+          <div class="field form-control-lg">
+            <div class="field form-label"><%= form.label :description %></div>
+            <%= form.text_area :description %>
+          </div>
+
+
+<!--  <div class="field">-->
+    <%#= form.label :user_id %>
+    <%#= form.text_field :user_id %>
+<!--  </div>-->
+
+          <div class="field form-control-lg">
+            <div class="field form-label"> <%= form.label :shipping_weight %></div>
+            <%= form.text_field :shipping_weight %>
+          </div>
+
+          <div class="field form-control-lg">
+            <div class="field form-label"> <%= form.label :quantity_available %></div>
+            <%= form.number_field :quantity_available %>
+          </div>
+
+          <!--  <div class="field">-->
+          <%#= form.label :user_id %>
+          <%#= form.text_field :user_id %>
+          <!--  </div>-->
+
+          <div class="field form-control-md mt-4">
+            <div class="field form-label"><%= form.label :images %></div>
+            <%= form.file_field :images, multiple: true %>
+          </div>
+
+          <div class="actions btn btn-round btn-success mt-5 ml-4"> <%= form.submit "Create Product", class: "btn btn-success btn-raised btn-sm " %></div>
+
+
+        <% end %>
+      </form>
+    </div>
+
+    <div class="col"></div>
+  </div>
+</div>
+

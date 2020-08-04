@@ -1,0 +1,40 @@
+
+<div class="container">
+  <div class="row mb-5 pt-5 mt-5">
+    <div class="col"></div>
+    <div class="col">
+      <h2 class="ml-5 title">Log in</h2>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-group label-floating has-success">
+
+            <div class="field form-control-lg form-text pl-5">
+              <div class="control-label"> <%= f.label :email %></div>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
+
+            <div class="field form-control-lg pl-5">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "current-password"%>
+            </div>
+
+            <% if devise_mapping.rememberable? %>
+              <div class="field form-control-lg pl-5 ml-4">
+                <div class="form-check-input"><%= f.check_box :remember_me %></div>
+                  <%= f.label :remember_me %>
+              </div>
+            <% end %>
+
+            <div class="button-container form-control-lg iframe-container">
+              <div class="actions ml-5 pl-5">
+                <%= f.submit "Log in", class: "btn btn-success btn-raised btn-lg" %>
+              </div>
+            </div>
+          </div>
+      <% end %>
+
+     <div class="ml-5"><%= render "devise/shared/links" %></div>
+      </div>
+    <div class="col"></div>
+  </div>
+</div>

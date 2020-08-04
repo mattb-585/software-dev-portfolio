@@ -1,0 +1,95 @@
+<div id="featuredProductsCarousel" class="carousel slide p-4" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#featuredProductsCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#featuredProductsCarousel" data-slide-to="1"></li>
+    <li data-target="#featuredProductsCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+<!--      <img class="d-block w-100" src="app/assets/images/bg.jpg" alt="First slide">-->
+       <%= image_tag('bg.jpg', alt: "First Slide", class: "d-block w-100", size: "1600x400") %>
+      <div class="carousel-caption d-none d-md-block bg-dark">
+        <h5><%= @products[0].name %></h5>
+        <p class="text-white"><%= @products[0].description %></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag('bg2.jpg', alt: "Second Slide", class: "d-block w-100", size: "1600x400") %>
+      <div class="carousel-caption d-none d-md-block bg-dark">
+        <h5><%= @products[1].name %></h5>
+        <p class="text-white"><%= @products[1].description %></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag('bg3.jpg', alt: "Third Slide", class: "d-block w-100", size: "1600x400") %>
+      <div class="carousel-caption d-none d-md-block bg-dark">
+        <h5><%= @products[2].name %></h5>
+        <p class="text-white"><%= @products[2].description %></p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#featuredProductsCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#featuredProductsCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="card-group">
+  <div class="card">
+    <div class="card-body text-center">
+      <h3 class="card-title">Apparel</h3>
+      <p class="card-text">Donec dignissim ornare libero, non aliquam dolor. Morbi nec finibus velit.</p>
+      <button type="button" class="btn btn-success">Shop Here</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body text-center">
+      <h3 class="card-title">Tech</h3>
+      <p class="card-text">Donec dignissim ornare libero, non aliquam dolor. Morbi nec finibus velit.</p>
+      <button type="button" class="btn btn-success">Shop Here</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body text-center">
+      <h3 class="card-title">Education</h3>
+      <p class="card-text">Donec dignissim ornare libero, non aliquam dolor. Morbi nec finibus velit.</p>
+      <button type="button" class="btn btn-success">Shop Here</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body text-center">
+      <h3 class="card-title">Tools</h3>
+      <p class="card-text">Donec dignissim ornare libero, non aliquam dolor. Morbi nec finibus velit.</p>
+      <button type="button" class="btn btn-success">Shop Here</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body text-center">
+      <h3 class="card-title">Games</h3>
+      <p class="card-text">Donec dignissim ornare libero, non aliquam dolor. Morbi nec finibus velit.</p>
+      <button type="button" class="btn btn-success">Shop Here</button>
+    </div>
+  </div>
+</div>
+
+<div class="row text-center flex justify-content-center bg-success pt-2 pb-3">
+  <div class="col-md-3 text-white mt-2 mb-2">
+    <i id="landingPageIcons" class="material-icons">people</i>
+    <h3 class="title m-0 text-white">Communicate with your favorite users!</h3>
+  </div>
+  <div class="col-md-3 text-white mt-2 mb-2">
+    <i id="landingPageIcons" class="material-icons">attach_money</i>
+    <h3 class="title m-0 text-white">Sell your unused items for quick cash!</h3>
+  </div>
+  <div class="col-md-3 text-white mt-2 mb-2">
+    <i id="landingPageIcons" class="material-icons">add_shopping_cart</i>
+    <h3 class="title m-0 text-white">Buy selling items at your convenience!</h3>
+  </div>
+</div>
+
+<%#= @products[0].product_images.first.image %>
+<%#= image_tag(@products[0].product_images.first.image, alt: "Second Slide", class: "d-block w-100", size: "1600x400") %>

@@ -1,0 +1,63 @@
+<nav class="navbar navbar-default sticky-top navbar-expand-lg" id="sectionsNav">
+  <!--<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">-->
+
+  <div class="container">
+
+    <div class="navbar-translate">
+      <%= link_to "Team Nodes", root_url, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" aria-label="Toggle navigation" data-target="#navigation-bar">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <form class="form-inline ml-auto">
+        <div class="form-group no-border">
+          <input type="text" class="form-control" placeholder="Search" size="50">
+        </div>
+        <button type="submit" class="btn btn-white btn-just-icon btn-round">
+          <i class="material-icons">search</i>
+        </button>
+      </form>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navigation-bar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <%= link_to "About", "#"%>
+        </li>
+        <li class="nav-item active mr-3 ml-3">
+          <%= link_to "Products", products_path%>
+        </li>
+        <% if user_signed_in? %>
+          <li class="nav-item mr-2">
+            <%= link_to "Profile", current_user%>
+          </li>
+        <% end %>
+        <li class="nav-item mr-4 ml-2">
+          <%= link_to "Contact", "#"%>
+        </li>
+        <% if user_signed_in? %>
+          <li class="button-container nav-item iframe-extern">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-rose btn-raised btn-round" %>
+          </li>
+        <% else %>
+          <li class="button-container nav-item iframe-extern">
+            <%= link_to_unless_current "Log in", new_user_session_path, class: "btn btn-success btn-raised btn-round" do %>
+            <% end %>
+          </li>
+          &nbsp;&nbsp;
+          <li class="button-container nav-item iframe-extern">
+            <%= link_to_unless_current "Sign up", new_user_registration_path, class: "btn btn-success btn-raised btn-round" do %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+  </div>
+
+</nav>

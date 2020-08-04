@@ -1,0 +1,27 @@
+<%# TODO: Turn this into a common partial for all the forms.  Add some CSS to this to do it up a bit. %>
+<%= form_with(model: [@product, @question], local: true) do |form| %>
+  <% if question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+        <% question.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :question, "Question:" %>
+    <%= form.text_area :question,
+                       class: "form-control", rows: 4,
+                       value: @content, placeholder: "Your question must be more than 4 characters." %>
+  </div>
+
+    <%= form.hidden_field :product_id %>
+
+  <div class="submit text-center">
+    <%= form.submit class: "btn btn-success btn-raised btn-round" %>
+  </div>
+<% end %>

@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Encrypted cc number:</strong>
+  <%= @payment.cc_number %>
+  <%= @payment.encrypted_cc_number %>
+</p>
+
+<p>
+  <strong>Encrypted exp date:</strong>
+  <%= @payment.exp_date %>
+  <%= @payment.encrypted_exp_date %>
+</p>
+
+<p>
+  <strong>Excrypted cvv num:</strong>
+  <%= @payment.cvv_num %>
+  <%= @payment.excrypted_cvv_num %>
+</p>
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>

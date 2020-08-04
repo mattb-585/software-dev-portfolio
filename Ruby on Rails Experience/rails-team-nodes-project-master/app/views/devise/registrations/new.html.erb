@@ -1,0 +1,142 @@
+<div class="row">
+  <div class="col mb-5">
+    <div class="card">
+      <div class="card-header card-header-info">
+        <h1 class="card-title text-center">Create Your Account Below</h1>
+      </div>
+
+      <div class="container mt-5">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+          <div class="row">
+            <div class="">
+              <div class="card">
+                <div class="card-header card-header-danger">
+                  <h3 class="card-title text-center">Shipping Information</h3>
+                </div>
+                <div class="card-body align-items-center">
+                  <div class="wrap-input100 validate-input validate-form form-label">
+                    <%= f.label :name, "Mailing Address (required)" %><br/>
+                    <%= f.text_field :mailing_address_line_one, autofocus: true, autocomplete: ":mailing_address_line_one", placeholder: "Line One" %>
+                  </div>
+
+                  <div class="field wrap-input100 validate-input form-label">
+                    <%= f.label :name, "Mailing Address (optional)" %><br/>
+                    <%= f.text_field :mailing_address_line_two, autofocus: true, autocomplete: "mailing_address_line_two", placeholder: "Line Two (Apt.# etc...)" %>
+                  </div>
+
+                  <div class="validate-input form-label">
+                    <%= f.label :name, "City" %><br/>
+                    <%= f.text_field :mailing_city, autofocus: true, autocomplete: "mailing_city", placeholder: "Your City/Town" %>
+                  </div>
+
+                  <div class="field wrap-input100 validate-input form-label">
+                    <%= f.label :name, "State Abbreviation" %><br/>
+                    <%= f.text_field :mailing_state, autofocus: true, autocomplete: "mailing_state", placeholder: "WA" %>
+                  </div>
+
+                  <div class="field wrap-input100 validate-input form-label">
+                    <%= f.label :name, "Zip Code" %><br/>
+                    <%= f.text_field :mailing_zip, autofocus: true, autocomplete: "mailing_zip", placeholder: "Your Zip Code" %>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- End Col-->
+            <div class="col-lg-4 mb-5">
+              <div class="card">
+
+                <div class="card-header card-header-danger">
+                  <h3 class="card-title text-center">Personal Information</h3>
+                </div>
+                <div class="card-body colored-shadow">
+                  <div class="field wrap-input100 validate-input form-label">
+                    <%= f.label :email %><br/>
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "abc@123.com" %>
+                  </div>
+
+                  <div class="field wrap-input100 validate-input form-label">
+                    <%= f.label :first_name %><br/>
+                    <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", placeholder: "John" %>
+                  </div>
+
+                  <div class="field wrap-input100 validate-input form-label">
+                    <%= f.label :last_name %><br/>
+                    <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "Doe" %>
+                  </div>
+
+                  <div class="field wrap-input100 validate-input form-label">
+                    <%= f.label :password %>
+                    <% if @minimum_password_length %>
+                      <em>(<%= @minimum_password_length %> characters minimum)</em>
+                    <% end %><br/>
+                    <%= f.password_field :password, autocomplete: "new-password" %>
+                  </div>
+
+                  <div class="field wrap-input100 validate-input form-label">
+                    <%= f.label :password_confirmation %><br/>
+                    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- End Col-->
+
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="card-header card-header-danger">
+                  <h3 class="card-title text-center">Personal Information</h3>
+                </div>
+                <div class="card-body">
+                  <div class="validate-input validate-form form-label">
+                    <%= f.label :name, "Billing Address (required)" %><br/>
+                    <%= f.text_field :billing_address_line_one, autofocus: true, autocomplete: ":billing_address_line_one", placeholder: "Line One" %>
+                  </div>
+
+                  <div class="field wrap-input100 validate-input form-label">
+                    <%= f.label :name, "Billing Address (optional)" %><br/>
+                    <%= f.text_field :billing_address_line_two, autofocus: true, autocomplete: "billing_address_line_two", placeholder: "Line Two (Apt.# etc...)" %>
+                  </div>
+
+                  <div class="field wrap-input100 validate-input form-label">
+                    <%= f.label :name, "City" %><br/>
+                    <%= f.text_field :billing_city, autofocus: true, autocomplete: "billing_city", placeholder: "Your City/Town" %>
+                  </div>
+
+                  <div class="field wrap-input100 validate-input form-label">
+                    <%= f.label :name, "State Abbreviation" %><br/>
+                    <%= f.text_field :billing_state, autocomplete: "billing_state", placeholder: "WA" %>
+                  </div>
+
+                  <div class="field wrap-input100 validate-input form-label">
+                    <%= f.label :name, "Zip Code" %><br/>
+                    <%= f.text_field :billing_zip, autofocus: true, autocomplete: "billing_zip", placeholder: "Your Zip Code" %>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- End Col-->
+
+
+          </div><!-- End Row-->
+          <!--          <div class="actions container-login100-form-btn m-t-32">-->
+          <%#= f.submit "Sign up", :class => "login100-form-btn" %>
+          <!--          </div>-->
+          <div class="row mb-5">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+            <button class="btn btn-success btn-round">
+              <i class="material-icons">check</i> Sign Up
+            </button>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+
+          </div>
+
+
+        <% end %>
+
+
+
+        <%#= render "devise/shared/links" %>
+        </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header card-header-danger">
+          <h2 class="card-title text-center">Enter Credit Card Information</h2>
+        </div>
+        <div class="card-body">
+          <%= form_with(model: payment, local: true) do |form| %>
+            <% if payment.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+                <ul>
+                  <% payment.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 align-content-center">
+
+                  <div class="form-group">
+
+                  <div class="field">
+                    <%= form.label :credit_card_number %>
+                    <%= form.text_field :cc_number %>
+                  </div>
+
+                  <div class="field">
+                    <%= form.label :expiration_date %>
+                    <%= form.text_field :exp_date %>
+                  </div>
+
+                  <div class="field">
+                    <%= form.label :cvv_num %>
+                    <%= form.text_field :cvv_num %>
+                  </div>
+
+                  <div class="actions">
+                    <%= form.submit %>
+                  </div>
+                  </div><!--end form-group-->
+                </div>
+                <div class="col-md-4"></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

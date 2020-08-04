@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="row">
+  <div class="col"></div>
+  <div class="col">
+    <h1 class="text-center title">Products</h1>
+
+    <%= paginate @products %>
+    <table class="table table-striped">
+      <thead class="bg-dark">
+      <tr>
+        <th class="text-white">Name</th>
+        <th class="text-white">Description</th>
+        <th class="text-white">Date Posted</th>
+        <th class="text-white">Price</th>
+        <th class="text-white">Shipping</th>
+        <th class="text-white">Quantity</th>
+        <th class="text-white">User</th>
+        <th class="text-white" colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.description %></td>
+          <td><%= product.date_posted %></td>
+          <td><%= product.price %></td>
+          <td><%= product.shipping_weight %></td>
+          <td><%= product.quantity_available %></td>
+          <td><%= product.user_id %></td>
+<!--          <td><button class="btn btn-sm btn-round btn-raised btn-success"<%#= link_to 'Show', product %></td>-->
+          <td><%= link_to "Show", product, class: "btn btn-sm btn-round btn-raised btn-success", data: { turbolinks: false } %></td>
+          <% if user_signed_in? %>
+            <% if current_user.id == product.user_id || current_user_admin? %>
+              <!--              <td><button class="btn btn-sm btn-round btn-raised btn-warning"<%#= link_to 'Edit', edit_product_path(product)%></td>-->
+              <td><%= link_to "Edit", edit_product_path(product), class: "btn btn-sm btn-round btn-raised btn-warning" %></td>
+              <td><%= link_to "Destroy", product, class: "btn btn-sm btn-round btn-raised btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <!--              <td><button class="btn btn-sm btn-round btn-raised btn-danger"<%#= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+            <% end %>
+          <% end %>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <button class="btn btn-info btn-round btn-sm"><%= link_to 'New Product', new_product_path %>  </button>
+  </div>
+  <div class="col"></div>
+</div>
+
+

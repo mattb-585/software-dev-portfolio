@@ -1,0 +1,45 @@
+<%- include("../shared/header") %>
+<%- include("../shared/shopStart") %>
+    <div class="col-lg-7 col-md-12">
+        <div class="text-center py-2 photo-header-background">
+            <img class="img-fluid" src="../images/BBQPlanksImages/BBQPlanks_Header.png" alt="BBQ Planks Header">
+        </div>
+        <div class="px-4 py-3 paper-background">
+            <div class="shop-item">
+                <div class="section-label mb-4">
+                    <p class="item-title">Cedar Barbecue Grilling Planks</p>
+                </div>
+                <div class="row white-text">
+                    <div class="col-8">
+                        <p>
+                            Made for use on your BBQ grill. Incredible smoky cedar flavors are infused into
+                            your foods. Convenient size, one size fits most BBQ grills. Use with gas or
+                            charcoal grills. Package includes 6 one-time use BBQ planks, and two recipes. Each
+                            plank can be used to cook for up to four eight-ounce portions. Make your summer
+                            barbeques unique and flavorful with the Cedar Barbeque Grilling Planks.
+                        </p>
+                    </div>
+                    <div class="col-4 text-center">
+                        <p class="m-0">
+                            Price: $15.00
+                        </p>
+                        <form action="/shop/add-bbqplanks" method="POST">
+                            <div class="">
+                                <label class="" for="quantity">Quantity:</label>
+                                <input class="w-25" type="number" id="quantity" name="quantity" value="1" min="1">
+                            </div>
+                            <input type="hidden" name="productName" value="Cedar Barbecue Grilling Planks">
+                            <input type="hidden" name="price" value=15.00>
+                            <input type="hidden" name="_csrf" value="<%= token %>" />
+                            <input type="image" value="submit" src="../images/AddToCart_button.png" alt="Submit Button">
+                        </form>
+                        <div class="item-image mt-3">
+                            <img src="../images/BBQPlanksImages/BBQPlank.png" alt="Passion Palate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include("../shared/shopEnd") %>
+<%- include("../shared/footer") %>

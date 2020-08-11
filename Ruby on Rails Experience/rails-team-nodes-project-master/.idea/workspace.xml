@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa94a22f-3967-4225-a549-5ca086352695" name="Default Changelist" comment="" />
+    <list default="true" id="aa94a22f-3967-4225-a549-5ca086352695" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +25,9 @@
     <expand />
     <select />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -29,6 +36,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1fclLL2PLBreNB6ULnxkCwO8Eur" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -44,6 +52,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -161,6 +170,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596525204616</updated>
       <workItem from="1596525208556" duration="2883000" />
+      <workItem from="1597102277046" duration="201000" />
     </task>
     <servers />
   </component>
@@ -168,44 +178,52 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1223" height="162" key="GridCell.Tab.0.bottom" timestamp="1596528921243">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1223" height="162" key="GridCell.Tab.0.bottom" timestamp="1597102596813">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
+    <state width="1223" height="162" key="GridCell.Tab.0.bottom/0.23.1280.709@0.23.1280.709" timestamp="1597102596813" />
     <state width="1223" height="162" key="GridCell.Tab.0.bottom/0.23.1280.710@0.23.1280.710" timestamp="1596526990123" />
     <state width="1223" height="162" key="GridCell.Tab.0.bottom/0.23.1280.713@0.23.1280.713" timestamp="1596528921243" />
-    <state width="1223" height="162" key="GridCell.Tab.0.center" timestamp="1596528921242">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1223" height="162" key="GridCell.Tab.0.center" timestamp="1597102596812">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
+    <state width="1223" height="162" key="GridCell.Tab.0.center/0.23.1280.709@0.23.1280.709" timestamp="1597102596812" />
     <state width="1223" height="162" key="GridCell.Tab.0.center/0.23.1280.710@0.23.1280.710" timestamp="1596526990122" />
     <state width="1223" height="162" key="GridCell.Tab.0.center/0.23.1280.713@0.23.1280.713" timestamp="1596528921242" />
-    <state width="1223" height="162" key="GridCell.Tab.0.left" timestamp="1596528921242">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1223" height="162" key="GridCell.Tab.0.left" timestamp="1597102596812">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
+    <state width="1223" height="162" key="GridCell.Tab.0.left/0.23.1280.709@0.23.1280.709" timestamp="1597102596812" />
     <state width="1223" height="162" key="GridCell.Tab.0.left/0.23.1280.710@0.23.1280.710" timestamp="1596526990119" />
     <state width="1223" height="162" key="GridCell.Tab.0.left/0.23.1280.713@0.23.1280.713" timestamp="1596528921242" />
-    <state width="1223" height="162" key="GridCell.Tab.0.right" timestamp="1596528921243">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1223" height="162" key="GridCell.Tab.0.right" timestamp="1597102596813">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
+    <state width="1223" height="162" key="GridCell.Tab.0.right/0.23.1280.709@0.23.1280.709" timestamp="1597102596813" />
     <state width="1223" height="162" key="GridCell.Tab.0.right/0.23.1280.710@0.23.1280.710" timestamp="1596526990122" />
     <state width="1223" height="162" key="GridCell.Tab.0.right/0.23.1280.713@0.23.1280.713" timestamp="1596528921243" />
-    <state width="1223" height="162" key="GridCell.Tab.1.bottom" timestamp="1596528921244">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1223" height="162" key="GridCell.Tab.1.bottom" timestamp="1597102596815">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
+    <state width="1223" height="162" key="GridCell.Tab.1.bottom/0.23.1280.709@0.23.1280.709" timestamp="1597102596815" />
     <state width="1223" height="162" key="GridCell.Tab.1.bottom/0.23.1280.710@0.23.1280.710" timestamp="1596526990128" />
     <state width="1223" height="162" key="GridCell.Tab.1.bottom/0.23.1280.713@0.23.1280.713" timestamp="1596528921244" />
-    <state width="1223" height="162" key="GridCell.Tab.1.center" timestamp="1596528921244">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1223" height="162" key="GridCell.Tab.1.center" timestamp="1597102596814">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
+    <state width="1223" height="162" key="GridCell.Tab.1.center/0.23.1280.709@0.23.1280.709" timestamp="1597102596814" />
     <state width="1223" height="162" key="GridCell.Tab.1.center/0.23.1280.710@0.23.1280.710" timestamp="1596526990125" />
     <state width="1223" height="162" key="GridCell.Tab.1.center/0.23.1280.713@0.23.1280.713" timestamp="1596528921244" />
-    <state width="1223" height="162" key="GridCell.Tab.1.left" timestamp="1596528921244">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1223" height="162" key="GridCell.Tab.1.left" timestamp="1597102596814">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
+    <state width="1223" height="162" key="GridCell.Tab.1.left/0.23.1280.709@0.23.1280.709" timestamp="1597102596814" />
     <state width="1223" height="162" key="GridCell.Tab.1.left/0.23.1280.710@0.23.1280.710" timestamp="1596526990124" />
     <state width="1223" height="162" key="GridCell.Tab.1.left/0.23.1280.713@0.23.1280.713" timestamp="1596528921244" />
-    <state width="1223" height="162" key="GridCell.Tab.1.right" timestamp="1596528921244">
-      <screen x="0" y="23" width="1280" height="713" />
+    <state width="1223" height="162" key="GridCell.Tab.1.right" timestamp="1597102596815">
+      <screen x="0" y="23" width="1280" height="709" />
     </state>
+    <state width="1223" height="162" key="GridCell.Tab.1.right/0.23.1280.709@0.23.1280.709" timestamp="1597102596815" />
     <state width="1223" height="162" key="GridCell.Tab.1.right/0.23.1280.710@0.23.1280.710" timestamp="1596526990126" />
     <state width="1223" height="162" key="GridCell.Tab.1.right/0.23.1280.713@0.23.1280.713" timestamp="1596528921244" />
     <state x="312" y="168" width="670" height="675" key="run.anything.popup" timestamp="1596525388049">
@@ -218,6 +236,6 @@
     <state x="312" y="57" width="670" height="676" key="search.everywhere.popup/0.23.1280.710@0.23.1280.710" timestamp="1596526075754" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/rails_team_nodes_project_master@Development__rails_team_nodes_project_master.rcov" NAME="Development: rails-team-nodes-project-master Coverage Results" MODIFIED="1596526990067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails-team-nodes-project-master" />
+    <SUITE FILE_PATH="coverage/rails_team_nodes_project_master@Development__rails_team_nodes_project_master.rcov" NAME="Development: rails-team-nodes-project-master Coverage Results" MODIFIED="1597102318215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rails-team-nodes-project-master" />
   </component>
 </project>

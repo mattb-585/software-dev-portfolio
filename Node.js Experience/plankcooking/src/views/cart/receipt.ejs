@@ -1,0 +1,105 @@
+<%- include("../shared/header") %>
+<div class="d-flex justify-content-center p-2 m-2 align-items-center cart-header">
+    <h5 class="my-2">Order Receipt > Step 4 of 4</h5>
+</div>
+
+<div class="p-2 m-2 cart-body">
+    <div class="table-design mb-4">
+        <div class="row w-100 m-0">
+            <div class="address-info col-lg-6 col-md-12 p-0">
+                <div class="d-flex address-header mb-3 pl-2 pt-2">
+                    <p class="font-weight-bold">Billing Address</p>
+                </div>
+                <div class="">
+                    <div class="row mx-0">
+                        <p class="col-2 p-0 mr-3 text-right">Name:</p>
+                        <p class="col-6 p-0"><%= billingAddress.firstName %> <%= billingAddress.lastName %></p>
+                    </div>
+                    <div class="row mx-0">
+                        <p class="col-2 p-0 mr-3 text-right">Address:</p>
+                        <div class="col-6 p-0">
+                            <p class="p-0 mb-0"><%= billingAddress.address %></p>
+                            <p class="p-0"><%= billingAddress.city %> <%= billingAddress.state %> <%= billingAddress.zip %></p>
+                        </div>
+                    </div>
+                    <div class="row mx-0">
+                        <p class="col-2 p-0 mr-3 text-right">Phone:</p>
+                        <p class="col-6 p-0"><%= billingAddress.phone %></p>
+                    </div>
+                    <div class="row mx-0">
+                        <p class="col-2 p-0 mr-3 text-right">Email:</p>
+                        <p class="col-6 p-0"><%= billingAddress.email %></p>
+                    </div>
+                </div>
+            </div>
+            <div class="address-info col-lg-6 col-md-12 p-0">
+                <div class="d-flex address-header mb-3 pl-2 pt-2">
+                    <p class="font-weight-bold">Shipping Address</p>
+                </div>
+                <div class="">
+                    <div class="row mx-0">
+                        <p class="col-2 p-0 mr-3 text-right">Name:</p>
+                        <p class="col-6 p-0"><%= shippingAddress.firstName %> <%= shippingAddress.lastName %></p>
+                    </div>
+                    <div class="row mx-0">
+                        <p class="col-2 p-0 mr-3 text-right">Address:</p>
+                        <div class="col-6 p-0">
+                            <p class="p-0 mb-0"><%= shippingAddress.address %></p>
+                            <p class="p-0"><%= shippingAddress.city %> <%= shippingAddress.state %> <%= shippingAddress.zip %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table-design mb-4">
+        <tr>
+          <th>Shipping to You</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+        <% cartItems.forEach(cartItem => {%>
+            <tr>
+                <td><%= cartItem.name %></td>
+                <td class="text-center">$<%= cartItem.price.toFixed(2) %></td>
+                <td class="text-center"><%= cartItem.quantity %></td>
+                <td class="text-center">$<%= cartItem.total.toFixed(2) %></td>
+            </tr>
+        <% }); %>
+        <tr>
+          <td colspan="4" class="text-right">
+              <p>Subtotal: $<%= subTotal.toFixed(2) %></p>
+              <div class="d-flex justify-content-end">
+                  <div class="mr-3">
+                      <p class="mb-0">Shipping & Handling:</p>
+                      <% if(currentPayment.shippingCost == 3.00) { %> 
+                        <p>U.S.P.S Parcel (3 - 8 days)</p>
+                      <% } %>
+                      <% if(currentPayment.shippingCost == 5.20) { %> 
+                        <p>U.S.P.S Priority (2 - 4 days)</p>
+                      <% } %> 
+                  </div>
+                  <p>$<%= currentPayment.shippingCost.toFixed(2) %></p>
+              </div>
+              <p class="font-weight-bold">Total: $<%= currentPayment.total.toFixed(2) %></p>
+            </td>
+        </tr>
+    </table>
+    <table class="table-design mb-4">
+        <tr>
+            <th class="text-center">Payment Information</th>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <p>Confirmation Code: 543289573498548392758437</p>
+                </div>
+                <div>
+                    <p>Card Number: <%= currentPayment.cardType %> <%= currentPayment.cardNumber %></p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<%- include("../shared/footer") %>

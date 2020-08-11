@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <div class="text-center">
+        <div class="btn-group mb-5 w-50">
+            <button class="btn shop-dropdown btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Shop
+            </button>
+            <div class="dropdown-menu w-100 shop-dropdown">
+                <a class="dropdown-item" href="/shop/spicerubs">Spice Rubs</a>
+                <a class="dropdown-item" href="/shop/cookbooks">Cookbooks</a>
+                <a class="dropdown-item" href="/shop/bakingplanks">Baking Planks</a>
+                <a class="dropdown-item" href="/shop/bbqplanks">BBQ Planks</a>
+                <a class="dropdown-item" href="/shop/nutdriver">Nut Driver</a>
+            </div>
+        </div>
+    </div>
+    <% if(errors.length > 0) { %> 
+        <div class="alert alert-danger">
+            <ul>
+                <% for(let ctr = 0; ctr < errors.length; ctr++) { %>
+                    <li><%= errors[ctr].msg %> </li>
+                <% } %> 
+            </ul>
+        </div>
+    <% } %>
+    <div class="row">
+        <div class="col-lg-4 text-center">
+            <img id="shop-logo" src="../images/Shop_MenuHeader.png" alt="Shop Image">
+            <ul class="nav flex-column side-nav mt-2">
+                <li class="nav-item text-center mx-5">
+                    <a class="nav-link" href="/shop/spicerubs">SPICE RUBS</a>
+                </li>
+                <li class="nav-item text-center mx-5">
+                    <a class="nav-link" href="/shop/cookbooks">COOKBOOKS</a>
+                </li>
+                <li class="nav-item text-center mx-5">
+                    <a class="nav-link" href="/shop/bakingplanks">BAKING PLANKS</a>
+                </li>
+                <li class="nav-item text-center mx-5">
+                    <a class="nav-link" href="/shop/bbqplanks">BBQ PLANKS</a>
+                </li>
+                <li class="nav-item text-center mx-5">
+                    <a class="nav-link" href="/shop/nutdriver">NUT DRIVER</a>
+                </li>
+            </ul>
+        </div>

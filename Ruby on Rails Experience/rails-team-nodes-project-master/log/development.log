@@ -397,3 +397,71 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 31ms (Views: 24.9ms | ActiveRecord: 0.8ms | Allocations: 13647)
 
 
+Started GET "/" for 127.0.0.1 at 2020-08-10 16:32:17 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PageController#index as HTML
+  Rendering page/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/page/index.html.erb:12
+  Rendered page/index.html.erb within layouts/application (Duration: 831.8ms | Allocations: 153621)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 6.0ms | Allocations: 782)
+  Rendered shared/_footer.html.erb (Duration: 0.9ms | Allocations: 101)
+Completed 200 OK in 1286ms (Views: 1264.7ms | ActiveRecord: 2.8ms | Allocations: 235116)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-08-10 16:33:04 -0700
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/products/index.html.erb:9
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:25
+  Rendered products/index.html.erb within layouts/application (Duration: 271.5ms | Allocations: 191941)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.3ms | Allocations: 240)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 300ms (Views: 293.3ms | ActiveRecord: 1.2ms | Allocations: 201879)
+
+
+Started GET "/products/212" for 127.0.0.1 at 2020-08-10 16:33:47 -0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"212"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 212], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:74:in `set_product'
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "product_images" WHERE "product_images"."product_id" = ?[0m  [["product_id", 212]]
+  ↳ app/views/products/show.html.erb:10
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "questions" WHERE "questions"."product_id" = ?[0m  [["product_id", 212]]
+  ↳ app/views/products/show.html.erb:157
+  Rendered products/show.html.erb within layouts/application (Duration: 13.8ms | Allocations: 6960)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.4ms | Allocations: 238)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 76ms (Views: 26.2ms | ActiveRecord: 3.1ms | Allocations: 27105)
+
+
+Started GET "/" for 127.0.0.1 at 2020-08-10 16:34:30 -0700
+Processing by PageController#index as HTML
+  Rendering page/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/page/index.html.erb:12
+  Rendered page/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 4197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 301)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.4ms | Allocations: 13112)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-08-10 16:34:43 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 207)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 4561)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_nav.html.erb (Duration: 0.8ms | Allocations: 257)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 73ms (Views: 36.2ms | ActiveRecord: 1.2ms | Allocations: 31173)
+
+

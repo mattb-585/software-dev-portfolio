@@ -1,0 +1,283 @@
+/* UNIVERSAL */
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+nav a {
+  color: #000000;
+}
+
+header nav a {
+  border-bottom: transparent 2px solid;
+  transition: .3s;
+}
+
+header nav a:hover {
+  color: #000000;
+  border-bottom: #000000 2px solid;
+}
+
+.navbar-nav {
+  position: relative;
+  right: -95%;
+  padding-top: 5px;
+}
+
+.navbar-brand {
+  padding: 8px;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+footer a {
+  border-right: 1px solid #000000;
+  padding-right: 5px;
+  font-size: 15px;
+}
+
+footer li:last-child a {
+  border-right: none;
+}
+
+/* Home */
+
+.home-icon {
+  font-size: 46px;
+}
+
+#jumbo-left {
+  padding-right: 0;
+  padding-left: 50px;
+}
+
+#jumbo-right {
+  padding-left: 0;
+}
+
+#profile-pic {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: #005a8a;
+}
+
+#profile-pic-bg {
+  background-color: #0090db;
+  display: inline-block;
+  padding: 15px;
+  margin: 0 10px 0 10px;
+  border-radius: 50%;
+}
+
+#about {
+  background-color: #005a8a;
+}
+
+#resume a {
+  background-color: #0090db;
+  padding: 8px;
+  color: #000000;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+#resume a:hover {
+  background-color: #001E2E;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Skills - Home */
+
+.section-header {
+  font-weight: lighter;
+  border-bottom: #000000 1px solid;
+  padding-bottom: 10px;
+}
+
+.skill-card-image i {
+  font-size: 86px;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.skill-card-image i::after {
+  content: '';
+  width: 150px;
+  height: 140px;
+  background-color: #005a8a;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  margin-left: -75px;
+  margin-top: -25px;
+}
+
+/* Work */
+
+.portfolio {
+  text-align: center;
+}
+
+.portfolio a {
+  border: 1px rgba(0, 0, 0, .3) solid;
+  position: relative;
+  margin-right: 5px;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.portfolio a::after {
+  content: "";
+  background-color:rgba(0, 90, 138, 0);
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -50%;
+  top: 53%;
+  transition: .3s;
+}
+
+.portfolio a:hover::after { 
+  content: "";
+  background-color:rgba(0, 90, 138, .8);
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  margin-left: -50%;
+  top: 50%;
+}
+
+#think-geek:hover::before { 
+  content: "Think Geek";
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  animation: project-title .3s;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+#team-nodes:hover::before { 
+  content: "Team Nodes";
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  animation: project-title .3s;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+#plankcooking:hover::before { 
+  content: "Plankcooking";
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  animation: project-title .3s;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+#ro-sham-bill:hover::before { 
+  content: "Ro Sham Bill";
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  animation: project-title .3s;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+#pet-tracker:hover::before { 
+  content: "Pet Tracker";
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  animation: project-title .3s;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+@keyframes project-title {
+  0% {opacity: 0%;}
+  100%{opacity: 100%;}
+}
+
+/* Work Pieces */
+
+.work-images {
+  text-align: center;
+}
+
+.about-project {
+  text-align: center;
+  margin-top: 30px;
+  border-top: #000000 1px solid;
+  border-bottom: #000000 1px solid;
+  padding: 20px 0 20px 0;
+}
+
+.about-header {
+  font-weight: lighter;
+}
+
+/* Media Queries */
+
+/* @media screen and (min-width: 320px) {
+    html {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+} */
+
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    position: unset;
+  }
+
+  .navbar-toggler:focus {
+    outline-color: #000000;
+  }
+
+  #jumbo-left {
+    order: 2;
+    text-align: center;
+  }
+
+  #jumbo-right {
+    order: 1;
+  }
+
+  #profile-pic {
+    width: 40%;
+    height: 40%;
+  }
+
+  #profile-pic-bg {
+    background: none;
+  }
+}
+
+/* @media screen and (min-width: 1000px) {
+    html {
+      font-size: 16px;
+    }
+} */

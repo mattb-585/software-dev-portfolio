@@ -76,6 +76,16 @@ footer li:last-child a {
   border-radius: 50%;
 }
 
+#home-header {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 80px;
+}
+
+/* #sub-header {
+  font-size: 30px;
+} */
+
 #about {
   background-color: #005a8a;
 }
@@ -124,11 +134,20 @@ footer li:last-child a {
   margin-top: -25px;
 }
 
+.skills-list {
+  flex-wrap: wrap;
+}
+
 /* Work */
 
 .portfolio {
   text-align: center;
 }
+
+/* .project-image {
+  width: 80%;
+  height: auto;
+} */
 
 .portfolio a {
   border: 1px rgba(0, 0, 0, .3) solid;
@@ -224,6 +243,16 @@ footer li:last-child a {
 
 /* Work Pieces */
 
+#app-project-carousel {
+  width: 25%;
+  height: auto;
+}
+
+#website-project-carousel {
+  width: 75%;
+  height: auto;
+}
+
 .work-images {
   text-align: center;
 }
@@ -242,11 +271,44 @@ footer li:last-child a {
 
 /* Media Queries */
 
-/* @media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) {
     html {
       font-size: calc(16px + 6 * ((100vw - 320px) / 680));
     }
-} */
+}
+
+@media screen and (max-width: 768px) {
+  #jumbo-left {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #home-header {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  #sub-header {
+    font-size: 22px;
+  }
+
+  .website-project {
+    width: 90%;
+    height: auto;
+  }
+
+  .website-project img {
+    width: 100%;
+    height: auto;
+  }
+
+  #app-project-carousel {
+    width: 50%;
+    height: auto;
+  }
+}
 
 @media screen and (max-width: 992px) {
   .navbar-nav {
@@ -267,8 +329,8 @@ footer li:last-child a {
   }
 
   #profile-pic {
-    width: 40%;
-    height: 40%;
+    width: 60%;
+    height: 60%;
   }
 
   #profile-pic-bg {
@@ -276,8 +338,8 @@ footer li:last-child a {
   }
 }
 
-/* @media screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
     html {
       font-size: 16px;
     }
-} */
+}

@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa94a22f-3967-4225-a549-5ca086352695" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rails-team-nodes-project-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rails-team-nodes-project-master.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/webpacker/last-compilation-digest-development" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/webpacker/last-compilation-digest-development" afterDir="false" />
-    </list>
+    <list default="true" id="aa94a22f-3967-4225-a549-5ca086352695" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,6 +168,7 @@
       <workItem from="1596525208556" duration="2883000" />
       <workItem from="1597102277046" duration="201000" />
       <workItem from="1598066204917" duration="330000" />
+      <workItem from="1598150513731" duration="292000" />
     </task>
     <servers />
   </component>
